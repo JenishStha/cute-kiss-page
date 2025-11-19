@@ -13,12 +13,23 @@ body {
     justify-content: center;
     align-items: center;
     font-family: "Poppins", sans-serif;
-    background: linear-gradient(135deg, #ffb6d9, #ffd9ec);
+    background: url('bubbu-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     overflow: hidden;
+    position: relative;
+}
+
+/* Optional overlay for better text visibility */
+body::before {
+    content: "";
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(255, 182, 217, 0.5);
+    z-index: 0;
 }
 
 .container {
-    background: white;
+    background: rgba(255, 255, 255, 0.85);
     padding: 30px;
     width: 90%;
     max-width: 450px;
@@ -27,6 +38,7 @@ body {
     text-align: center;
     position: relative;
     animation: pop 0.7s ease;
+    z-index: 1;
 }
 
 @keyframes pop {
